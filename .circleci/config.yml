@@ -19,4 +19,5 @@ jobs:
 
     steps:
       - checkout
-      - run: echo "Ello test"
+      - run: echo "Hello test"
+      - run: pwd
