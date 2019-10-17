@@ -20,4 +20,5 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello test"
-      - run: pwd
+      - run: ls
+      - run: ls ../
