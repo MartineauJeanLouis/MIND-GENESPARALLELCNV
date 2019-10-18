@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![]("../images/MindGeneslogo.png" height= "45" width="1500")
+![image]("../images/MindGeneslogo.png" height= "45" width="1500")
 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3497400.svg)](https://doi.org/10.5281/zenodo.3497400)
