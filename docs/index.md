@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ![logo](../images/MindGeneslogo.png width=50)
 
 
