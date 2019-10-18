@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 title: Time Machine theme
 description: Time Machine is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
+=======
+>>>>>>> 9f022d2197129d5d968ce64fed4ce7afcba70943
 theme: jekyll-theme-time-machine
