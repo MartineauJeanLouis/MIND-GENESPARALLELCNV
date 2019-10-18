@@ -1,4 +1,4 @@
-![logo](../images/MindGeneslogo.png width=50)
+![logo](./images/MindGeneslogo.png)
 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3497400.svg)](https://doi.org/10.5281/zenodo.3497400)
