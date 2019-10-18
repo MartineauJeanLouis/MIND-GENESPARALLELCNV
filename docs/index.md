@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<p align="center">
-  <img src="../images/MindGeneslogo.png" height= "45" width="1500" alt="accessibility text">
-</p>
+
+![]("../images/MindGeneslogo.png" height= "45" width="1500")
+
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3497400.svg)](https://doi.org/10.5281/zenodo.3497400)
 
@@ -29,9 +29,9 @@ This section is specially made for research lab that want to prepare their CNV c
 
 Our goal in this section is to create a tool which will help researchers to better parse the UK biobank data at a low cost of computational resources and efficient execution time. The scripts are located in repository called "UKBB_DATA_GENERATOR". The image below shows a summary view of the data preparation protocol. To better understand the protocol, it's recommended to study the scripts and any constructive suggestion will be welcome and grateful.
 
-<p align="center">
-  <img src="../images/UKBB_data_prepare_image.png" width="600" alt="accessibility text">
-</p>
+
+![]("../images/UKBB_data_prepare_image.png" width="600" )
+
 Before executing the analysis, here is an overview of the working repository.
 
 ```text
@@ -141,9 +141,9 @@ for option in BAF LRR CR
 In the above case, the user is computing sequential jobs, therefore only one CPU is required while the amount of required memory remain unchanged.
 
 Here is some execution graph results for the execution of an option as shown above:
-<p align="center">
-  <img src="../images/SizeAndExecTimeExemples.png" width=750" alt="accessibility text">
-</p>
+
+![]("../images/SizeAndExecTimeExemples.png" width=750" )
+
 
 
 Now that the big transposed matrix is created, on can extract reduced final report for CNV calling from them. To do so, the user can use the provided script named "warperForFinalreportOutput.sh". The script is entirely parallel, and the command line bellow should do the jobs.
@@ -250,9 +250,9 @@ Then hit,
 #### Running the pipeline scripts
 
 
-<p align="center">
-  <img src="../images/CNVcallingreqirements.png" width="400" alt="accessibility text">
-</p>
+
+![]("../images/CNVcallingreqirements.png" width="400" )
+
 1) First, one need to make sure that all individuals signal files are well formatted according to the bellow example. Name them as following: 
 ```list
 SAMPLE_NAME_1.txt
@@ -291,9 +291,9 @@ For the remaining input file format, please refer to the PennCNV official readme
 The user project repository should look as below.
 
 
-<p align="center">
-  <img src="../images/InstallRepo.png" width="400" alt="accessibility text">
-</p>
+
+![]("../images/InstallRepo.png" width="400" )
+
 Before running the pipeline, one need to compute the pfb file required by PennCNV.
 To do so, the user should shuffle a list of at leat 300 samples from the project cohort and 
 compute the population B allele frequency using the provided PennCNV plugins.
@@ -406,9 +406,9 @@ bash ./cnvCallingPipelineWarper.sh 0 10 0-10 $PWD/PipelineInput.config True Fals
 ```
 The execution last only 15 seconds for the analysis of 10 samples. The output results should looks like the print-screen below:
 
-<p align="center">
-  <img src="../images/output_quality_summary.png" width="800" alt="accessibility text">
-</p>
+
+![]("../images/output_quality_summary.png" width="800" )
+
 
 The output results files are located in the provided directory (config file):
 
@@ -438,18 +438,18 @@ The hmm process example using 10 samples last ~10mn, it saves the results in the
 ```
 The HMM file should looks like the print-screen below.
 
-<p align="center">
-  <img src="../images/HMM.png" width="400" alt="accessibility text">
-</p>
+
+![]("../images/HMM.png" width="400" )
+
 
 The HMM results is a pre-requisite file for PennCNV only, QuantiSNP is able to create it's own EM model each time the CNV calling algorithm is launch. To build a better understand on how and why PennCNV use an HMM model please refer to their tools published paper and repository (http://penncnv.openbioinformatics.org). 
 
 #### CNV detection
 
 
-<p align="center">
-  <img src="../images/CNVcallingResultsAndFiltering.png" width="400" alt="accessibility text">
-</p>
+
+![]("../images/CNVcallingResultsAndFiltering.png" width="400" )
+
 
 The PennCNV running dependencies are now satisfied. We can run the CNV detection by PennCNV or QuantiSNP, or by both together. In this example, we will call the CNVs by each algorithm separately. This process is entirely parallel with high efficiency. In order to activate the PennCNV CNV calling option, the user must provide the CNV detection option as "detect" and as always, set the PennCNV option to "True". Here is the command line example to call the CNV with PennCNV in parallel.
 
@@ -471,9 +471,9 @@ gonosome_sample10.rawcnv
 ```
 Here is a print-screen example of PennCNV output results for sample1
 
-<p align="center">
-  <img src="../images/PennCNVdetect.png" width="600" alt="accessibility text">
-</p>
+
+![]("../images/PennCNVdetect.png" width="600" )
+
 
 Now, we will show the example of CNV calling by the QuantiSNP algorithm. It's the same command line but the PennCNV algorithm execution Boolean will be set to False while the QuantiSNP one will be set to True alone. In this case, remember that the only valid CNV detection option is "detect", the two others are useless. The CNV calling by QuantiSNP is also entirely parallel. Here is the command line example for the QuantiSNP execution.
 
@@ -494,20 +494,20 @@ The QuantiSNP samples quality analysis generates quality assessment results per 
 ```
 Here is the original print-screen for the QuantiSNP quality output. As we see the format is different from PennCNV one, therefore the standardization of both data formats is required. 
 
-<p align="center">
-  <img src="../images/QuantiSNPqual.png" width="600" alt="accessibility text">
-</p>
+
+![]("../images/QuantiSNPqual.png" width="600" )
+
 
 Here is a print-screen example of the QuantiSNP CNV detection results output.
-<p align="center">
-  <img src="../images/QuantiSNPcnv.png" width="700" alt="accessibility text">
-</p>
+
+![]("../images/QuantiSNPcnv.png" width="700" )
+
 
 #### CNV quality check and annotation for functional inquireries
 
-<p align="center">
-  <img src="../images/CNVcallingQualityImageAnnotation.png" width="600" alt="accessibility text">
-</p>
+
+![]("../images/CNVcallingQualityImageAnnotation.png" width="600" )
+
 
 #### Reference
 ```text
