@@ -108,10 +108,10 @@ Before executing the analysis, here is an overview of the working repository.
 
 The scripts that help to format and generate the final reports should be located at:
 ```text
-/~/CNV-calling/UKBB_DATA_GENERATOR/formatUKBBdataToFinalReport.py
-/~/CNV-calling/UKBB_DATA_GENERATOR/generateFinalReportFromTransposeData.py
-/~/CNV-calling/UKBB_DATA_GENERATOR/warperForfileTranspose.sh
-/~/CNV-calling/UKBB_DATA_GENERATOR/warperForFinalreportOutput.sh
+/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/formatUKBBdataToFinalReport.py
+/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/generateFinalReportFromTransposeData.py
+/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/warperForfileTranspose.sh
+/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/warperForFinalreportOutput.sh
 ```
 Before starting to extract reduced final report input for CNV calling from the UKBB big matrices, on need to reformat the raw downloaded data. As indicated in the summary image above, UKBB provide the BAF, LRR, Confidence Score in big high dimensional matrices. We also need to take in count that the sample and the SNP line up in the files remain the same in all of the other files.
 
@@ -174,7 +174,7 @@ Usage:
 One must be aware that header columns order will not necessarily be respected from a lab data to another, and that's the reason that we must always verify the column order. Lucky you !!!, we developed a data splitting procedure which take in count more parameters and take care of the BAF, LLR and the order variables in the matrix. The goal is not to make the process more complicated but instead to make the process more specific.
 Some procedures require additional analysis on the genotyped markers. This mean, if a subset of SNP hasn't been well genotyped across the cohort, they got to be removed from the raw data, therefore this option is available from our script. The process cannot be paralleled since the algorithm need to read the file up until the end. The process execution time in linear O(n), but improvement will be applied by using file index jumper technique.
 
-The scripts are available in the path "~/CNV-calling/Illumina_beadStudio_data_splitter/SplittedIlluminaBeadStudioFinalReport.py" and can be executed as below. But before executing the scripts, the user must prepare a list of high quality SNPs (see the format below) and a list of sample ID which need to be extracted (see format below).
+The scripts are available in the path "~/MIND-GENESPARALLELCNV/Illumina_beadStudio_data_splitter/SplittedIlluminaBeadStudioFinalReport.py" and can be executed as below. But before executing the scripts, the user must prepare a list of high quality SNPs (see the format below) and a list of sample ID which need to be extracted (see format below).
 
 Example of SNP list file and it does not contain any header:
 
@@ -277,13 +277,18 @@ For the remaining input file format, please refer to the PennCNV official readme
 2) Download the pipeline scripts and save them in the master project repository using the git commandline:
    
    ```bash
-   git clone https://github.com/labjacquemont/CNV-calling.git
+   git clone https://github.com/labjacquemont/MIND-GENESPARALLELCNV.git
+   ```
+   or
+
+   ```bash
+   git clone https://github.com/martineaujeanlouis/MIND-GENESPARALLELCNV.git
    ```
    
    then, 
    
    ```bash
-   unzip CNV-calling-master && cd CNV-calling-master
+   unzip MIND-GENESPARALLELCNV && cd MIND-GENESPARALLELCNV
    ```
 
 The user project repository should look as below.
@@ -372,7 +377,7 @@ To compute the PFB in parallel, the user only need to provide the directory path
 
 Command line to execute the scripts in parallel:
 ```bash
-pyScript=~/CNV-calling/computePFBparallel/pyCNVCallingParallel.py
+pyScript=~/MIND-GENESPARALLELCNV/computePFBparallel/pyCNVCallingParallel.py
 inputListSamples=/directory_path_to_the_fragmented_list_of_samples_per_chr/
 inputListSNP=/directory_path_to_the_fragmented_list_of_SNP_per_chr/
 outputResults=/directory_path_to_the_pfb_results_per_chr/
