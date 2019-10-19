@@ -1,5 +1,6 @@
+###Mind&GenesParallelCNV
 <p align="center">
-  <img src="images/MindGeneslogo.png" height= "65" width="1500" alt="accessibility text">
+  <img src="images/MindGeneslogo.png" height= "75" width="1500" alt="accessibility text">
 </p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3497400.svg)](https://doi.org/10.5281/zenodo.3497400)
