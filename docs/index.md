@@ -140,7 +140,7 @@ In the above case, the user is computing sequential jobs, therefore only one CPU
 
 Here is some execution graph results for the execution of an option as shown above:
 <p align="center">
-  <img src="./images/SizeAndExecTimeExemples.png" width=750" alt="accessibility text">
+<img src="./images/SizeAndExecTimeExemples.png" width=750" alt="accessibility text">
 </p>
 
 
