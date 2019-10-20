@@ -1,5 +1,7 @@
+### Mind&GenesParallelCNV
+
 <p align="center">
-  <img src="./images/MindGeneslogo.png" height= "80" width="1500" alt="accessibility text">
+  <img src="images/MindGeneslogo.png" height= "80" width="1500" alt="accessibility text">
 </p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3497400.svg)](https://doi.org/10.5281/zenodo.3497400)
@@ -206,6 +208,7 @@ Process under implementation, will be available soon
 __- DNACopy__
 Process under implementation, will be available soon
 
+
 #### Data input preparation
 
 This section is specially made for research lab that want to prepare their CNV calling input files from the UKBB cohort. For those that are familiar with the UKBB (Uk biobank) cohort snp array genotyping data, it's easy to quickly realize that the data are presented in a high dimensional level and very high storage memory. The manipulation of these data is very challenging and for lab groups that do not have computational resources, this challenge difficulty might be increased.
@@ -213,7 +216,7 @@ This section is specially made for research lab that want to prepare their CNV c
 Our goal in this section is to create a tool which will help researchers to better parse the UK biobank data at a low cost of computational resources and efficient execution time. The scripts are located in repository called "UKBB_DATA_GENERATOR". The image below shows a summary view of the data preparation protocol. To better understand the protocol, it's recommended to study the scripts and any constructive suggestion will be welcome and grateful.
 
 <p align="center">
-  <img src="./images/UKBB_data_prepare_image.png" width="600" alt="accessibility text">
+  <img src="images/UKBB_data_prepare_image.png" width="600" alt="accessibility text">
 </p>
 Before executing the analysis, here is an overview of the working repository.
 
@@ -293,10 +296,10 @@ Before executing the analysis, here is an overview of the working repository.
 
 The scripts that help to format and generate the final reports should be located at:
 ```text
-/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/formatUKBBdataToFinalReport.py
-/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/generateFinalReportFromTransposeData.py
-/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/warperForfileTranspose.sh
-/~/MIND-GENESPARALLELCNV/UKBB_DATA_GENERATOR/warperForFinalreportOutput.sh
+/~/CNV-calling/UKBB_DATA_GENERATOR/formatUKBBdataToFinalReport.py
+/~/CNV-calling/UKBB_DATA_GENERATOR/generateFinalReportFromTransposeData.py
+/~/CNV-calling/UKBB_DATA_GENERATOR/warperForfileTranspose.sh
+/~/CNV-calling/UKBB_DATA_GENERATOR/warperForFinalreportOutput.sh
 ```
 Before starting to extract reduced final report input for CNV calling from the UKBB big matrices, on need to reformat the raw downloaded data. As indicated in the summary image above, UKBB provide the BAF, LRR, Confidence Score in big high dimensional matrices. We also need to take in count that the sample and the SNP line up in the files remain the same in all of the other files.
 
@@ -325,7 +328,7 @@ In the above case, the user is computing sequential jobs, therefore only one CPU
 
 Here is some execution graph results for the execution of an option as shown above:
 <p align="center">
-<img src="./images/SizeAndExecTimeExemples.png" width="750" alt="accessibility text">
+  <img src="images/SizeAndExecTimeExemples.png" width=750" alt="accessibility text">
 </p>
 
 
@@ -359,7 +362,7 @@ Usage:
 One must be aware that header columns order will not necessarily be respected from a lab data to another, and that's the reason that we must always verify the column order. Lucky you !!!, we developed a data splitting procedure which take in count more parameters and take care of the BAF, LLR and the order variables in the matrix. The goal is not to make the process more complicated but instead to make the process more specific.
 Some procedures require additional analysis on the genotyped markers. This mean, if a subset of SNP hasn't been well genotyped across the cohort, they got to be removed from the raw data, therefore this option is available from our script. The process cannot be paralleled since the algorithm need to read the file up until the end. The process execution time in linear O(n), but improvement will be applied by using file index jumper technique.
 
-The scripts are available in the path "~/MIND-GENESPARALLELCNV/Illumina_beadStudio_data_splitter/SplittedIlluminaBeadStudioFinalReport.py" and can be executed as below. But before executing the scripts, the user must prepare a list of high quality SNPs (see the format below) and a list of sample ID which need to be extracted (see format below).
+The scripts are available in the path "~/CNV-calling/Illumina_beadStudio_data_splitter/SplittedIlluminaBeadStudioFinalReport.py" and can be executed as below. But before executing the scripts, the user must prepare a list of high quality SNPs (see the format below) and a list of sample ID which need to be extracted (see format below).
 
 Example of SNP list file and it does not contain any header:
 
@@ -434,7 +437,7 @@ Then hit,
 
 
 <p align="center">
-  <img src="./images/CNVcallingreqirements.png" width="400" alt="accessibility text">
+  <img src="images/CNVcallingreqirements.png" width="400" alt="accessibility text">
 </p>
 1) First, one need to make sure that all individuals signal files are well formatted according to the bellow example. Name them as following: 
 ```list
@@ -462,25 +465,20 @@ For the remaining input file format, please refer to the PennCNV official readme
 2) Download the pipeline scripts and save them in the master project repository using the git commandline:
    
    ```bash
-   git clone https://github.com/labjacquemont/MIND-GENESPARALLELCNV.git
-   ```
-   or
-
-   ```bash
-   git clone https://github.com/martineaujeanlouis/MIND-GENESPARALLELCNV.git
+   git clone https://github.com/labjacquemont/CNV-calling.git
    ```
    
    then, 
    
    ```bash
-   unzip MIND-GENESPARALLELCNV && cd MIND-GENESPARALLELCNV
+   unzip CNV-calling-master && cd CNV-calling-master
    ```
 
 The user project repository should look as below.
 
 
 <p align="center">
-  <img src="./images/InstallRepo.png" width="400" alt="accessibility text">
+  <img src="images/InstallRepo.png" width="400" alt="accessibility text">
 </p>
 Before running the pipeline, one need to compute the pfb file required by PennCNV.
 To do so, the user should shuffle a list of at leat 300 samples from the project cohort and 
@@ -530,7 +528,7 @@ rs4040617       1       779322  0.14156425702811246
 
 The user must intersect the project SNP locus data to the downloaded PFB data in other to produce the expect PFB data as formatted above. To do so, one might need the betools intersectbed available at https://github.com/arq5x/bedtools or through apt-get
 
-If the user cohort size is greater than 300 samples, then the user can compute the PFB dataset on his own cohort intensity files. To do so, the user have 2 options computing linearly the analysis without worry about additional files manipulation. The user need to create a list of the raw samples, each preceding their path. The user must not forget to select the best qualified samples (See the CNV calling requirement preparation). Prior the this analysis, the user must compute the summary quality analysis for all the samples then extract the best qualified samples based specific quality threshold criterion (BAF_SD: B Allele frequency standard deviation), LRR_SD: Log R Ratio standard deviation, WF: Absolute value of the wave factor, The sample array call rate(Example are provided graph). 
+If the user cohort size is greater than 300 samples, then the user can compute the PFB dataset on his own cohort intensity files. To do so, the user have 2 options computing linearly the analysis without worry about additional files manipulation. The user need to create a list of the raw samples, each preceding their path. The user must not forget to select the best qualified samples (See the CNV calling requirement preparation). Prior the this analysis, the user must compute the summary quality analysis for all the samples then extract the best qualified samples based specific quality threshold criterion (BAF_SD: B Allele frequency standard deviation), LRR_SD: Log R Ratio standard deviation, ||WF||: Absolute value of the wave factor, The sample array call rate(Example are provided graph). 
 
 The user can use the compute_pfb.pl plugins locate in the installation directory of PennCNV, follow the command line below to compute the PFB:
 
@@ -562,7 +560,7 @@ To compute the PFB in parallel, the user only need to provide the directory path
 
 Command line to execute the scripts in parallel:
 ```bash
-pyScript=~/MIND-GENESPARALLELCNV/computePFBparallel/pyCNVCallingParallel.py
+pyScript=~/CNV-calling/computePFBparallel/pyCNVCallingParallel.py
 inputListSamples=/directory_path_to_the_fragmented_list_of_samples_per_chr/
 inputListSNP=/directory_path_to_the_fragmented_list_of_SNP_per_chr/
 outputResults=/directory_path_to_the_pfb_results_per_chr/
@@ -595,7 +593,7 @@ bash ./cnvCallingPipelineWarper.sh 0 10 0-10 $PWD/PipelineInput.config True Fals
 The execution last only 15 seconds for the analysis of 10 samples. The output results should looks like the print-screen below:
 
 <p align="center">
-  <img src="./images/output_quality_summary.png" width="800" alt="accessibility text">
+  <img src="images/output_quality_summary.png" width="800" alt="accessibility text">
 </p>
 
 The output results files are located in the provided directory (config file):
@@ -627,7 +625,7 @@ The hmm process example using 10 samples last ~10mn, it saves the results in the
 The HMM file should looks like the print-screen below.
 
 <p align="center">
-  <img src="./images/HMM.png" width="400" alt="accessibility text">
+  <img src="images/HMM.png" width="400" alt="accessibility text">
 </p>
 
 The HMM results is a pre-requisite file for PennCNV only, QuantiSNP is able to create it's own EM model each time the CNV calling algorithm is launch. To build a better understand on how and why PennCNV use an HMM model please refer to their tools published paper and repository (http://penncnv.openbioinformatics.org). 
@@ -636,7 +634,7 @@ The HMM results is a pre-requisite file for PennCNV only, QuantiSNP is able to c
 
 
 <p align="center">
-  <img src="./images/CNVcallingResultsAndFiltering.png" width="400" alt="accessibility text">
+  <img src="images/CNVcallingResultsAndFiltering.png" width="400" alt="accessibility text">
 </p>
 
 The PennCNV running dependencies are now satisfied. We can run the CNV detection by PennCNV or QuantiSNP, or by both together. In this example, we will call the CNVs by each algorithm separately. This process is entirely parallel with high efficiency. In order to activate the PennCNV CNV calling option, the user must provide the CNV detection option as "detect" and as always, set the PennCNV option to "True". Here is the command line example to call the CNV with PennCNV in parallel.
@@ -660,7 +658,7 @@ gonosome_sample10.rawcnv
 Here is a print-screen example of PennCNV output results for sample1
 
 <p align="center">
-  <img src="./images/PennCNVdetect.png" width="600" alt="accessibility text">
+  <img src="images/PennCNVdetect.png" width="600" alt="accessibility text">
 </p>
 
 Now, we will show the example of CNV calling by the QuantiSNP algorithm. It's the same command line but the PennCNV algorithm execution Boolean will be set to False while the QuantiSNP one will be set to True alone. In this case, remember that the only valid CNV detection option is "detect", the two others are useless. The CNV calling by QuantiSNP is also entirely parallel. Here is the command line example for the QuantiSNP execution.
@@ -683,18 +681,18 @@ The QuantiSNP samples quality analysis generates quality assessment results per 
 Here is the original print-screen for the QuantiSNP quality output. As we see the format is different from PennCNV one, therefore the standardization of both data formats is required. 
 
 <p align="center">
-  <img src="./images/QuantiSNPqual.png" width="600" alt="accessibility text">
+  <img src="images/QuantiSNPqual.png" width="600" alt="accessibility text">
 </p>
 
 Here is a print-screen example of the QuantiSNP CNV detection results output.
 <p align="center">
-  <img src="./images/QuantiSNPcnv.png" width="700" alt="accessibility text">
+  <img src="images/QuantiSNPcnv.png" width="700" alt="accessibility text">
 </p>
 
 #### CNV quality check and annotation for functional inquireries
 
 <p align="center">
-  <img src="./images/CNVcallingQualityImageAnnotation.png" width="600" alt="accessibility text">
+  <img src="images/CNVcallingQualityImageAnnotation.png" width="600" alt="accessibility text">
 </p>
 
 #### Reference
