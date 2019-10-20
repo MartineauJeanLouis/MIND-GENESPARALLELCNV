@@ -23,9 +23,10 @@ contact:
 This tool is implemented as collaboration to LabJacquemont
 
 ### Install Mind&GenesParralelCNV
-
+```bash
 git clone https://github.com/MartineauJeanLouis/MIND-GENESPARALLELCNV.git
 cd MIND-GENESPARALLELCNV
+```
 Follow the following link for a complete tutorial on the tools functionalities.
 https://martineaujeanlouis.github.io/MIND-GENESPARALLELCNV/
 
