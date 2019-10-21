@@ -1,3 +1,12 @@
+
+
+<p align="center">
+  <img src="./images/welcomeImage.png" height= "1100" width="1500" alt="accessibility text">
+</p>
+Please click below to follow your selected CNV calling tutorial
+
+[CREATE DATA]()
+
 <p align="center">
   <img src="./images/MindGeneslogo.png" height= "80" width="1500" alt="accessibility text">
 </p>
