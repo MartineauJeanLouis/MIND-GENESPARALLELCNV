@@ -76,7 +76,7 @@ bash MCRinstaller64.run
 ```
 
 ```bash
-# download b37 folder containing GC5base informations for Hg19 built.
+## download b37 folder containing GC5base informations for Hg19 built.
 wget ftp://ftp.stats.ox.ac.uk/pub/yau/QUANTISNP/download/b37.tar.gz
 tar zxf b37.tar.gz
 ```
@@ -152,7 +152,8 @@ bash $quantiSNP $MCRPATH
 ```
 
 The output should be as followed:
-
+<details>
+  <summary>Click to expand output results!</summary>
 ```text
 $quantiSNP $MCRPATH
 ------------------------------------------
@@ -161,7 +162,7 @@ Setting up environment variables
 LD_LIBRARY_PATH is .:./QUANTISNP/v79/runtime/glnxa64:./QUANTISNP/v79/bin/glnxa64:./QUANTISNP/v79/sys/os/glnxa64:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64/server:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64/client:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64
 QuantiSNP v2.2
 ----------------
-
+</details>
 
 This software was developed and compiled using MATLAB R2008b 
 and MATLAB Compiler 4.8 (R) (C) 1984-2010, The Mathworks, Inc.
@@ -334,7 +335,7 @@ __- DNACopy__
 
 Process under implementation, will be available soon
 
-#### Data input preparation
+## Data input preparation
 
 This section is specially made for research lab that want to prepare their CNV calling input files from the UKBB cohort. For those that are familiar with the UKBB (Uk biobank) cohort snp array genotyping data, it's easy to quickly realize that the data are presented in a high dimensional level and very high storage memory. The manipulation of these data is very challenging and for lab groups that do not have computational resources, this challenge difficulty might be increased.
 
@@ -344,7 +345,8 @@ Our goal in this section is to create a tool which will help researchers to bett
   <img src="./images/UKBB_data_prepare_image.png" width="600" alt="accessibility text">
 </p>
 Before executing the analysis, here is an overview of the working repository.
-
+<details>
+  <summary>Click to expand directory details!</summary>
 ```text
 # Below is the user specified B Allele frequency score data location
 
@@ -418,6 +420,9 @@ Before executing the analysis, here is an overview of the working repository.
 ...
 /~/OutputFinalReport_09
 ```
+</details>
+
+
 
 The scripts that help to format and generate the final reports should be located at:
 ```text
@@ -558,7 +563,7 @@ Then hit,
 4) Finally, fill out the configuration file (.config file) with all required paths for the tools and files paths.
 
 
-#### Running the pipeline scripts
+## Running the pipeline scripts
 
 
 <p align="center">
@@ -614,7 +619,7 @@ Before running the pipeline, one need to compute the pfb file required by PennCN
 To do so, the user should shuffle a list of at leat 300 samples from the project cohort and 
 compute the population B allele frequency using the provided PennCNV plugins.
 
-#### Generate PFB per SNP data
+## Generate PFB per SNP data
 
 The PFB data is required for CNV calling by pennCNV. To compute pfb for a CNV calling project by PennCNV, it exists 2 possibility based on the sample size available. A sample size of the project cohort less than ~300 samples means that there is not enough observation to compute statistically significant population frequency. Therefore the user must download a generic version of the pfb data that reflect the cohort ancestry. In this case, the user can follow the bellow procedure.
 
@@ -697,13 +702,13 @@ outputResults=/directory_path_to_the_pfb_results_per_chr/
 mpirun -np 24 python3 $pyScript $inputListSamples $inputListSNP $outputResults > pfbouput.log
 ```
 
-#### Generate GC correct per SNP data
+## Generate GC correct per SNP data
 
 GC correct technique is important in CNV calling since it helps the researchers to evaluate the genomics site wave length factor in the cohort genotyping data.
 
 To create GC content data for a project, if is not available for the SNP array technology, one can refer to the well explained tutorial by Vib Bioinformatics Core available at https://wiki.bits.vib.be/index.php/Create_a_GC_content_track#cite_note-2 . 
 
-#### Generate samples quality summary data for inspection
+## Generate samples quality summary data for inspection
 The samples quality inspection is required for the HMM training step. As we recommend users to compute their
 cohort specific HMM upon their best qualified samples. Once the quality summary data is generated for
 each sample, the best samples must be selected according the following parameters:
@@ -739,7 +744,7 @@ Using Linux classic one-liner command lines, one can filter out bad quality samp
 with at most an LLR_SD value of 0.20 or lower. Why .20 or lower? because PennCNV HMM training default QC only accept
 samples quality that passing the indicated threshold.
 
-#### Generate cohort specific HMM data
+## Generate cohort specific HMM data
 
 Now that we have the best quality samples, one can compute the HMM training using the option "hmm". Before launching the analysis, make sure that the list of the best quality samples is already created and specified in the config file. Also one must indicate the location to save the hmm file. This process can not be executed in parallel and can last between 1-2hr for a sample size of ~400 individuals. To start the analysis, follow the command line below:
 
@@ -760,7 +765,7 @@ The HMM file should looks like the print-screen below.
 
 The HMM results is a pre-requisite file for PennCNV only, QuantiSNP is able to create it's own EM model each time the CNV calling algorithm is launch. To build a better understand on how and why PennCNV use an HMM model please refer to their tools published paper and repository (http://penncnv.openbioinformatics.org). 
 
-#### CNV detection
+## CNV detection
 
 
 <p align="center">
@@ -819,13 +824,13 @@ Here is a print-screen example of the QuantiSNP CNV detection results output.
   <img src="./images/QuantiSNPcnv.png" width="700" alt="accessibility text">
 </p>
 
-#### CNV quality check and annotation for functional inquireries
+## CNV quality check and annotation for functional inquireries
 
 <p align="center">
   <img src="./images/CNVcallingQualityImageAnnotation.png" width="600" alt="accessibility text">
 </p>
 
-#### Reference
+## Reference
 ```text
 1) Huguet G, Schramm C, Douard E, Jiang L, Labbe A, Tihy F, Mathonnet G, Nizard S, Lemyre E, Mathieu A, Poline JB, Loth E, Toro R, Schumann G, Conrod P, Pausova Z, Greenwood C, Paus T, Bourgeron T, Jacquemont S; IMAGEN Consortium. Measuring and Estimating the Effect Sizes of Copy Number Variants on General Intelligence in Community-Based Samples. JAMA Psychiatry. 2018 May 1;75(5):447-457. doi: 10.1001/jamapsychiatry.2018.0039. PubMed PMID: 29562078; PubMed Central PMCID:PMC5875373
 2) Wang K, Li M, Hadley D, Liu R, Glessner J, Grant S, Hakonarson H, Bucan M. PennCNV: an integrated hidden Markov model designed for high-resolution copy number variation detection in whole-genome SNP genotyping data Genome Research 17:1665-1674, 2007
