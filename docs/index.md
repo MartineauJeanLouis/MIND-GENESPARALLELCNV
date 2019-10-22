@@ -1,23 +1,3 @@
-
-<Grid Background="{StaticResource SidebarHeaderBackground}">
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*" />
-        <ColumnDefinition Width="Auto" />
-    </Grid.ColumnDefinitions>
-
-    <StackPanel Orientation="Horizontal">
-        <fa:FontAwesome Icon="Bookmark" Foreground="Goldenrod" Height="16" Width="16" Margin="5,2,0,0" />
-        <TextBlock Height="Auto" 
-                   Text="Favorites"  
-                   FontWeight="SemiBold" FontSize="11"  Padding="4,5,2,5" />
-    </StackPanel>
-
-    <Button  fa:Awesome.Content="ChevronCircleLeft" Background="Transparent" 
-             Foreground="{DynamicResource BlueItem}" Padding="7,0,7,0" Grid.Column="1"  
-             Name="ButtonClosePanel" BorderThickness="0" FontSize="12"                     
-             ToolTip="Close Sidebar Panel" 
-             Command="{Binding AppModel.Commands.CloseLeftSidebarPanelCommand}" />
-</Grid>
 <p align="center">
   <img src="./images/welcomeImage.png" height= "800" width="1700" alt="accessibility text">
 </p>
@@ -65,9 +45,9 @@
 </style>
 </head>
 <body>
-<p align="center">
+
 <h2>Mind&GenesParallelCNV</h2>
-</p>
+
 <button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://w3docs.com';"><span>How to install </span></button><button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://w3docs.com';"><span>Tutorial</span></button><button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://w3docs.com';"><span>Download the tools </span></button>
 </body>
 
