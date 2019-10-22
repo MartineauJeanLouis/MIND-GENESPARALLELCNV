@@ -51,7 +51,9 @@ Please click below to follow your selected CNV calling tutorial
 
 <h2>Animated Button</h2>
 
-<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+<button class="button" style="vertical-align:middle"><span>Hover </span></button><button class="button" style="vertical-align:middle"><span>Hover </span></button><button class="button" style="vertical-align:middle"><span>Hover </span></button><button class="button" style="vertical-align:middle"><span>Hover </span></button>
+
+<button class="button" style="vertical-align:middle"><span>Hover </span></button><button class="button" style="vertical-align:middle"><span>Hover </span></button><button class="button" style="vertical-align:middle"><span>Hover </span></button><button class="button" style="vertical-align:middle"><span>Hover </span></button>
 
 </body>
 
