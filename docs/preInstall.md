@@ -59,8 +59,6 @@ wget ftp://ftp.stats.ox.ac.uk/pub/yau/QUANTISNP/download/b37.tar.gz
 tar zxf b37.tar.gz
 ```
 
-<details>
-  <summary>Click to expand output results for the MCR v7.9 setup.!</summary>
 ```text
 (base) nomade@nomade-Aspire-V3-571:~/QuantiSNP/MCR$ wget ftp://ftp.stats.ox.ac.uk/pub/yau/QUANTISNP/mcr/MCRinstaller64.run
 --2019-10-19 14:57:34--  ftp://ftp.stats.ox.ac.uk/pub/yau/QUANTISNP/mcr/MCRinstaller64.run
@@ -74,15 +72,13 @@ Logging in as anonymous ... Logged in!
 ==> PASV ... done.    ==> RETR MCRinstaller64.run ... done.
 Length: 318274185 (304M) (unauthoritative)
 
-MCRinstaller64.run                  100%[=================================================================>] 303.53M  14.9MB/s    in 23s     
+MCRinstaller64.run                  100%[=================================================================>] 303.53M  14.9MB/s    in 23s
 
 2019-10-19 14:57:58 (13.2 MB/s) - ‘MCRinstaller64.run’ saved [318274185]
 ```
-</details>
 
 now, here is the output for the mcr installation.
-<details>
-  <summary>Click to expand output!</summary>
+
 ```text
 Verifying archive integrity... All good.
 Uncompressing MATLAB Component-Runtime Libraries....
@@ -107,7 +103,6 @@ Do you accept the license conditions and still wish to proceed with installation
 Cleaning up installation files
 rm: remove write-protected regular file 'license.txt'?
 ```
-</details>
 
 This mean Java JRE were not available on the computer, please follow online tutorial on JRE installation for MCR.
 In addition, the software doesnt realy need JVM to be pre-installed since it's able to create it's own local copy "QUANTISNP/_JVM/".
@@ -130,8 +125,8 @@ bash $quantiSNP $MCRPATH
 ```
 
 The output should be as followed:
-<details>
-  <summary>Click to expand output results!</summary>
+
+
 ```text
 $quantiSNP $MCRPATH
 ------------------------------------------
@@ -140,7 +135,7 @@ Setting up environment variables
 LD_LIBRARY_PATH is .:./QUANTISNP/v79/runtime/glnxa64:./QUANTISNP/v79/bin/glnxa64:./QUANTISNP/v79/sys/os/glnxa64:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64/server:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64/client:./QUANTISNP/v79/sys/java/jre/glnxa64/jre/lib/amd64
 QuantiSNP v2.2
 ----------------
-</details>
+
 
 This software was developed and compiled using MATLAB R2008b 
 and MATLAB Compiler 4.8 (R) (C) 1984-2010, The Mathworks, Inc.
@@ -177,10 +172,9 @@ ldd QUANTISNP/v79/bin/glnxa64/libmwmclmcr.so
 ```
 The output must show all the shared path required by this library to run properly
 
-<details>
-  <summary>Click to expand output results!</summary>
+
 ```text
-	linux-vdso.so.1 (0x00007ffdd7fec000)
+linux-vdso.so.1 (0x00007ffdd7fec000)
 libmwmcr.so => ./QUANTISNP/v79/bin/glnxa64/../../bin/glnxa64/libmwmcr.so (0x00007f7ef5d5f000)
 libut.so => ./QUANTISNP/v79/bin/glnxa64/../../bin/glnxa64/libut.so (0x00007f7ef587c000)
 libmwfl.so => ./QUANTISNP/v79/bin/glnxa64/../../bin/glnxa64/libmwfl.so (0x00007f7ef5752000)
@@ -271,7 +265,7 @@ libbsd.so.0 => /lib/x86_64-linux-gnu/libbsd.so.0 (0x00007f7eebc6e000)
 libXdmcp.so.6 => /usr/lib/x86_64-linux-gnu/libXdmcp.so.6 (0x00007f7eeba68000)
 libXau.so.6 => /usr/lib/x86_64-linux-gnu/libXau.so.6 (0x00007f7eeb864000)
 ```
-</details>
+
 As observed __libXp.so.6__ is not available, and caused the runtime exception. First we need to down load the library file online. My prefered link is https://pkgs.org/.
 Make sure to select the proper architecture. If the user doesn't have the proper administrator rights to install the libraries by deb or dpkg, follow the below instructions:
 ``` text
@@ -288,6 +282,7 @@ cp -rf ./QUANTISNP/lib/* ./QUANTISNP/v79/bin/glnxa64
 # then execute
 ldd QUANTISNP/v79/bin/glnxa64/libmwmclmcr.so | grep "liXp.so"
 ```
+
 ```text
 libXpm.so.4 => /usr/lib/x86_64-linux-gnu/libXpm.so.4 (0x00007ff405944000)
 libXp.so.6 => /home/nomade/Downloads/QUANTISNP/v79/bin/glnxa64/../../bin/glnxa64/../../bin/glnxa64/../../bin/glnxa64/libXp.so.6 (0x00007ff403e96000)
