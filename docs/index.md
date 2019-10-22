@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="./images/welcomeImage.png" height= "1100" width="1500" alt="accessibility text">
+  <img src="./images/welcomeImage.png" height= "800" width="1700" alt="accessibility text">
 </p>
 Please click below to follow your selected CNV calling tutorial
 <head>
@@ -28,13 +28,14 @@ Please click below to follow your selected CNV calling tutorial
 
 
 <div class="btn-group">
-  <button class="button">Button</button>
-  <button class="button">Button</button>
-  <button class="button">Button</button>
-  <button class="button">Button</button>
+  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
+  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
+  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
+  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
 </div>
 
-
+"\n
+\n"
 
 </body>
 <p align="center">
