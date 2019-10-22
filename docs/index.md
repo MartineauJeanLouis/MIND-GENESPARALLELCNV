@@ -6,7 +6,7 @@
 Please click below to follow your selected CNV calling tutorial
 <head>
 <style>
-.btn-group .button {
+.btn .button {
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -30,7 +30,7 @@ Please click below to follow your selected CNV calling tutorial
 <h2>Button Groups</h2>
 
 
-<div class="btn-group">
+<div class="btn">
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
