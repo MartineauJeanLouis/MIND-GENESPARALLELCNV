@@ -1,0 +1,10 @@
+### Tutorial sections
+- [Prepare BAF and LRR data](prepare_baff_lrr.md)
+- [How to execute the pipeline](running_pipeline.md)
+- [Compute PFB](prepare_pfb.md)
+- [Generate GC correct data](gc_correct.md)
+- [Compute quality summary](quality_summary.md)
+- [Compute HMM](hmm.md)
+- [CNV detection](detect.md)
+- [Quality and annotation](quality_annotation.md)
+- [References](references.md)
