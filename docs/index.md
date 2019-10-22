@@ -48,7 +48,7 @@
 
 <h2>Mind&GenesParallelCNV</h2>
 
-<button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://martineaujeanlouis.github.io/MIND-GENESPARALLELCNV/#/preInstall';"><span>How to install </span></button><button class="button" style="vertical-align:middle" onclick="window.location.href = './preInstall.md';"><span>Tutorial</span></button><button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://w3docs.com';"><span>Download the tools </span></button>
+<button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://github.com/MartineauJeanLouis/MIND-GENESPARALLELCNV/blob/master/docs/preInstall.md';"><span>How to install </span></button><button class="button" style="vertical-align:middle" onclick="window.location.href = './preInstall.md';"><span>Tutorial</span></button><button class="button" style="vertical-align:middle" onclick="window.location.href = 'https://w3docs.com';"><span>Download the tools </span></button>
 </body>
 
 <h2>Button Groups</h2>
