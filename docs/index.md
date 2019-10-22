@@ -4,14 +4,10 @@
   <img src="./images/welcomeImage.png" height= "1100" width="1500" alt="accessibility text">
 </p>
 Please click below to follow your selected CNV calling tutorial
-
-  <head>
-    <title>Title of the document</title>
-    <style>
-      .btn {
+      btn {
       position: absolute;
-  top: 50%;
-  left: 50%;
+      top: 50%;
+      left: 50%;
       display: inline-block;
       padding: 10px 25px;
       margin: 4px 2px;
@@ -24,9 +20,8 @@ Please click below to follow your selected CNV calling tutorial
       color: #fff;
       cursor: pointer;
       }
-    </style>
-    <style>
-      .btn1 {
+
+      btn1 {
       position: absolute;
       top: 50%;
       left: 80%;
@@ -42,12 +37,9 @@ Please click below to follow your selected CNV calling tutorial
       color: #fff;
       cursor: pointer;
       }
-    </style>
-  </head>
   <body>
     <button class="btn" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Click<br />Me!</button><button class="btn1" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">no Click<br />Me!</button>
-
-
+  </body>
 <p align="center">
   <img src="./images/MindGeneslogo.png" height= "80" width="1500" alt="accessibility text">
 </p>
