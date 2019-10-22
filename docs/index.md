@@ -10,46 +10,49 @@ Please click below to follow your selected CNV calling tutorial
   position: absolute;
   bottom: 50%;
   left: 50%;
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
+      display: inline-block;
+      padding: 10px 25px;
+      margin: 4px 2px;
+      background-color: #82b74b;
+      border: 3px solid #f0efef;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
 }
 .btn1 {
   position: absolute;
   bottom: 50%;
   left: 40%;
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
+      display: inline-block;
+      padding: 10px 25px;
+      margin: 4px 2px;
+      background-color: #82b74b;
+      border: 3px solid #f0efef;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
 }
 .btn2 {
   position: absolute;
   bottom: 50%;
   left: 30%;
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
+      display: inline-block;
+      padding: 10px 25px;
+      margin: 4px 2px;
+      background-color: #82b74b;
+      border: 3px solid #f0efef;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
 }
 </style>
 </head>
