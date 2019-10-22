@@ -19,15 +19,13 @@ Please click below to follow your selected CNV calling tutorial
   float: left;
 }
 
-.btn-group .button:hover {
-  background-color: #3e8e41;
-}
+
 </style>
 </head>
 <body>
 
 <h2>Button Groups</h2>
-<p>Remove margins and float the buttons to create a button group:</p>
+
 
 <div class="btn-group">
   <button class="button">Button</button>
@@ -36,7 +34,7 @@ Please click below to follow your selected CNV calling tutorial
   <button class="button">Button</button>
 </div>
 
-<p style="clear:both"><br>Remember to clear floats after, or else will this p element also float next to the buttons.</p>
+
 
 </body>
 <p align="center">
