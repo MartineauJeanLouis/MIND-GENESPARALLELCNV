@@ -4,42 +4,41 @@
   <img src="./images/welcomeImage.png" height= "1100" width="1500" alt="accessibility text">
 </p>
 Please click below to follow your selected CNV calling tutorial
-      btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: inline-block;
-      padding: 10px 25px;
-      margin: 4px 2px;
-      background-color: #82b74b;
-      border: 3px solid #f0efef;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
-      }
+<head>
+<style>
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
 
-      btn1 {
-      position: absolute;
-      top: 50%;
-      left: 80%;
-      display: inline-block;
-      padding: 10px 25px;
-      margin: 4px 2px;
-      background-color: #82b74b;
-      border: 3px solid #f0efef;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
-      }
-  <body>
-    <button class="btn" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Click<br />Me!</button><button class="btn1" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">no Click<br />Me!</button>
-  </body>
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+<h2>Button Groups</h2>
+<p>Remove margins and float the buttons to create a button group:</p>
+
+<div class="btn-group">
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+</div>
+
+<p style="clear:both"><br>Remember to clear floats after, or else will this p element also float next to the buttons.</p>
+
+</body>
 <p align="center">
   <img src="./images/MindGeneslogo.png" height= "80" width="1500" alt="accessibility text">
 </p>
