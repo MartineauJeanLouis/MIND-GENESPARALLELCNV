@@ -7,6 +7,9 @@ Please click below to follow your selected CNV calling tutorial
 <head>
 <style>
 .btn-group .button {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -34,8 +37,7 @@ Please click below to follow your selected CNV calling tutorial
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
 </div>
 
-"\n
-\n"
+
 
 </body>
 <p align="center">
