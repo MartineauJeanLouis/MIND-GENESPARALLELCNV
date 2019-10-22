@@ -6,75 +6,58 @@
 Please click below to follow your selected CNV calling tutorial
 <head>
 <style>
-.btn {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-      display: inline-block;
-      padding: 10px 25px;
-      margin: 4px 2px;
-      background-color: #82b74b;
-      border: 3px solid #f0efef;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
-.btn1 {
-  position: absolute;
-  bottom: 50%;
-  left: 40%;
-      display: inline-block;
-      padding: 10px 25px;
-      margin: 4px 2px;
-      background-color: #82b74b;
-      border: 3px solid #f0efef;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-.btn2 {
+
+.button span:after {
+  content: '\00bb';
   position: absolute;
-  bottom: 50%;
-  left: 30%;
-      display: inline-block;
-      padding: 10px 25px;
-      margin: 4px 2px;
-      background-color: #82b74b;
-      border: 3px solid #f0efef;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 </style>
 </head>
 <body>
 
+<h2>Animated Button</h2>
+
+<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+
+</body>
+
 <h2>Button Groups</h2>
 
 
-<div class="btn">
-  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
-  </div>
- 
- <div class="btn1">
-  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
-  </div>
-  <div class="btn2">
-  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
-  </div>
-
-
-
-</body>
 <p align="center">
   <img src="./images/MindGeneslogo.png" height= "80" width="1500" alt="accessibility text">
 </p>
