@@ -6,7 +6,7 @@
 Please click below to follow your selected CNV calling tutorial
 <head>
 <style>
-.btn .button {
+.btn {
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -21,8 +21,36 @@ Please click below to follow your selected CNV calling tutorial
   cursor: pointer;
   float: left;
 }
-
-
+.btn1 {
+  position: absolute;
+  bottom: 50%;
+  left: 40%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+.btn2 {
+  position: absolute;
+  bottom: 50%;
+  left: 30%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
 </style>
 </head>
 <body>
@@ -32,10 +60,14 @@ Please click below to follow your selected CNV calling tutorial
 
 <div class="btn">
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
+  </div>
+ 
+ <div class="btn1">
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
+  </div>
+  <div class="btn2">
   <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
-  <button class="button" onclick="window.location.href = 'https://www.w3docs.com';" type="submit">Button</button>
-</div>
+  </div>
 
 
 
