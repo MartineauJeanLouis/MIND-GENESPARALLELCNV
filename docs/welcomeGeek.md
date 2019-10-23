@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="./_images/welcomeImage.png" height= "700" width="800" alt="accessibility text">
+  <img src="./_images/welcomeImage.png" height= "400" width="500" alt="accessibility text">
 </p>
 
 <style>
