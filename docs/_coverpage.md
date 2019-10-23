@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 
 <p align="center">
-  <img src="_images/Logoproject.png" height= "800" width="800" alt="accessibility text">
+  <img src="_images/Logoproject.png" height= "550" width="600" alt="accessibility text">
 </p>
 
 # Mind&GenesParallelCNV
