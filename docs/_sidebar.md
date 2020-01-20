@@ -7,4 +7,5 @@
 - [Compute HMM](hmm.md)
 - [CNV detection](detect.md)
 - [Quality and annotation](quality_annotation.md)
+- [Docker](docker.md)
 - [References](references.md)
